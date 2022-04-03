@@ -1,0 +1,306 @@
+@font-face {
+    font-family: "Whitney Bold";
+    src: url('../../font/whitneybold-webfont.woff') format('woff2'),
+         url('../../font/whitneybold-webfont.woff2') format('woff');
+}
+
+@font-face {
+    font-family: "Whitney";
+    src: url('../../font/whitney_medium-webfont.woff') format('woff'),
+         url('../../font/whitney_medium-webfont.woff2') format('woff2');
+}
+
+h1,h2,h3,h4,h5,h6,p,span{
+    margin: 0;
+    font-family: "Whitney", "Whitney Bold";
+}
+
+a{
+    text-decoration: none;
+}
+
+input{
+    border: none;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.iframe-container{
+    background-color: #004624;
+    padding: 30px;
+    font-family: "Whitney", "Whitney Bold";
+}
+
+.container{
+    display: flex;
+}
+
+.container_2 {
+    margin-block-start: auto;
+    margin-block-end: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: "Whitney";
+    font-size: 50px;
+    color: white;
+    margin-bottom: 13px;
+}
+
+.description {
+    display: flex;
+    margin-bottom: 13px;
+    color: white;
+    fill: white;
+}
+
+.publishedAt{
+    display: flex;
+    margin-right: 10px;
+    font-size: 13.5px;
+}
+
+.total-views {
+    display: flex;
+    font-size: 13.5px;
+}
+
+.number-views{
+    margin-left: 5px;
+}
+
+.controls-panel-box{
+    display: flex;
+    color: white;
+    fill: white;
+}
+
+.time-box{
+    font-size: 14px;
+    display: flex;
+}
+
+.time {
+    margin: auto 5px;
+    margin-right: 10px;
+}
+
+.play-pause-btn{
+    cursor: pointer;
+}
+
+.speed-box, .volume-box {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.volume-box{
+    margin-left: 5px;
+}
+
+.speed-btn{
+    cursor: pointer;
+}
+
+.speed-btn-animation {
+    animation: rotate-icon .3s;
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.speed-panel-box, .volume-panel-box{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    position: absolute;
+    font-family: Whitney;
+    border-radius: 2px;
+    font-size: 13px;
+    border: 2px solid black;
+    animation: appear .3s;
+    user-select: none;
+    overflow-y: scroll;
+    height: 90px;
+    margin-bottom: 25px;
+}
+
+.alert-panel-box{
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #fff7b3;
+    border: 1.5px solid #ffc300;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Whitney;
+    font-size: 13px;
+}
+
+.speed-panel-alert-box{
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #fff7b3;
+    border: 1.5px solid #ffc300;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-family: Whitney;
+    font-size: 13px;
+}
+
+.volume-panel-box{
+    height: auto;
+}
+
+.speed-panel-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.speed-panel-box::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 20px;
+}
+
+.speed-value, .volume-value {
+    padding: 10px 20px;
+}
+
+.speed-value:hover{
+    background-color: #d1d1d1;
+}
+
+.volume-value{
+    padding-left: 10px;
+    display: flex;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+}
+
+.volume-btn {
+    cursor: pointer;
+}
+
+.volume-value > p{
+    margin-right: 7px;
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+.volume-range{
+    -webkit-appearance: none;
+    width: 100%;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    background-color: rgb(214, 214, 214);
+}
+
+.volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+.volume-range::-moz-range-thumb {
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+.volume_oncontextmenu_box{
+    padding: 6px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fade .2s;
+    position: relative;
+    left: -20px;
+    bottom: -20px;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0
+    } to {
+        opacity: 1
+    }
+}
+
+.mute {
+    color: white;
+    font-size: 13px;
+}
+
+.mute > div{
+    font-family: "Whitney";
+    margin-right: 10px;
+}
+
+.volume_oncontextmenu_box:hover{
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+.seekslider {
+    -webkit-appearance: none;
+    width: 100%;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    background-color: rgb(214, 214, 214);
+}
+
+.seekslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.seekslider::-moz-range-thumb {
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
