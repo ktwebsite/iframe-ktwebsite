@@ -9,8 +9,6 @@ $.getJSON("https://www.googleapis.com/youtube/v3/videos?id=P3CRrLoTaeU&key=AIzaS
         number_views.innerText = views;
     });
 
-var audio = new Audio("https://cdn.glitch.global/84a5dd4b-f041-4091-88bc-5797c8a8129b/KTMuZik%201.mp3?v=1648969637618");
-
 const play_pause_btn = document.getElementById('play-pause-btn');
 var seekslider = document.getElementById("seekslider");
 
