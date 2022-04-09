@@ -1,75 +1,526 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iframe KTMuZik 1</title>
-    <link rel="stylesheet" href="../css/ktmuzik/ktmuzik.css">
-</head>
-<body style="margin: 0; height: 100%;">
-    <div class="iframe-container">
-        <div class="container">
-            <img class="img-container" src="../img/ktmuzik.JPG" alt="KTMuZik" width="130" height="130">
-            <div class="container_2">
-                <p class="title">KTMuZik 1</p>
-                <div class="description">
-                    <div class="publishedAt">
-                        <svg viewBox="0 0 24 24" style="margin-right: 5px;" width="15" height="15">
-                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
-                        </svg>
-                        <p class="publish_date" id="publish-date">2000-01-01</p>
-                    </div>
-                    <div class="total-views">
-                        <p style="font-family: Whitney Bold;">Total Views:</p>
-                        <div class="number-views" id="number-views">0</div>
-                    </div>
-                </div>
-                <div class="controls-panel-box">
-                    <svg viewBox="0 0 36 36" id="play-pause-btn" class="play-pause-btn" width="27" height="27">
-                        <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
-                    </svg>
-                    <div class="time-box">
-                        <div class="time">
-                            <span id="time-current">00:00</span>
-                            <span> / </span>
-                            <span id="time-duration">00:00</span>
-                        </div>
-                        <input id="seekslider" type="range" class="seekslider" min="0" max="100" value="0" step="1" style="width: 150px; height: 3px;">
-                    </div>
-                    <div class="speed-box">
-                        <div id="speed-panel-box" style="display: none;" class="speed-panel-box">
-                            <div id="2x" class="speed-value">2x</div>
-                            <div id="1.5x" class="speed-value">1.5x</div>
-                            <div id="1.0x" class="speed-value">1.0x</div>
-                            <div id="0.5x" class="speed-value">0.5x</div>
-                            <div id="0.25x" class="speed-value">0.25x</div>
-                        </div>
-                        <svg viewBox="0 0 24 24" id="speed-btn" class="speed-btn" width="24" height="24">
-                            <path d="M10,8v8l6-4L10,8L10,8z M6.3,5L5.7,4.2C7.2,3,9,2.2,11,2l0.1,1C9.3,3.2,7.7,3.9,6.3,5zM5,6.3L4.2,5.7C3,7.2,2.2,9,2,11 l1,.1C3.2,9.3,3.9,7.7,5,6.3zM5,17.7c-1.1-1.4-1.8-3.1-2-4.8L2,13c0.2,2,1,3.8,2.2,5.4L5,17.7zM11.1,21c-1.8-0.2-3.4-0.9-4.8-2 l-0.6,.8C7.2,21,9,21.8,11,22L11.1,21zM22,12c0-5.2-3.9-9.4-9-10l-0.1,1c4.6,.5,8.1,4.3,8.1,9s-3.5,8.5-8.1,9l0.1,1 C18.2,21.5,22,17.2,22,12z"></path>
-                        </svg>
-                    </div>
-                    <div class="volume-box">
-                        <svg viewBox="0 0 35 35" id="volume-btn" class="volume-btn" width="35" height="25">
-                            <path d="M8,21 L12,21 L17,26 L17,10 L12,15 L8,15 L8,21 Z M19,14 L19,22 C20.48,21.32 21.5,19.77 21.5,18 C21.5,16.26 20.48,14.74 19,14 ZM19,11.29 C21.89,12.15 24,14.83 24,18 C24,21.17 21.89,23.85 19,24.71 L19,26.77 C23.01,25.86 26,22.28 26,18 C26,13.72 23.01,10.14 19,9.23 L19,11.29 Z"></path>
-                        </svg>
-                        <div class="volume-panel-box" id="volume-panel-box" style="display: none;">
-                            <div class="volume-value">
-                                <p id="volume-value">50%</p>
-                                <input type="range" id="volume-slider" class="volume-range" name="volume" min="0" max="100" value="50" style="width: 150px; height: 3px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div id="volume_oncontextmenu_box" style="display: none;" class="volume_oncontextmenu_box">
-                        <div id="mute" class="mute">
-                            <div id="mute-text">Mute</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/ktmuzik/ktmuzik-1.js"></script>
-</body>
-</html>
+.header-box-1{
+    display: flex;
+}
+
+.title {
+    font-size: 45px;
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+.information-box3 {
+    display: flex;
+}
+
+.static{
+    font-size: 13px;
+    margin-right: 15px;
+    width: 200px;
+}
+
+.information-music {
+    margin-bottom: 10px;
+}
+
+.like-dislike-btn {
+    display: flex;
+}
+
+.like-btn, .dislike-btn {
+    display: flex;
+    margin-right: 13px;
+}
+
+.svg-like-btn, .svg-dislike-btn {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.like-text, .dislike-text {
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+.about {
+    font-size: 14px;
+}
+
+.content-background{
+    background:white;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.bar {
+    display: none;
+}
+
+.go-back{
+    margin: 10px;
+}
+
+.go-back svg{
+    transform: scale(-1, 1);
+}
+
+.informations {
+    margin: 50px;
+}
+
+.information-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.information-box1{
+    display: flex;
+    margin-bottom: 50px;
+    user-select: none;
+}
+
+.information-box2{
+    display: flex;
+    flex-direction: column;
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+.text-box-informations{
+    display: flex;
+}
+
+.item-box{
+    margin-block-start: auto;
+    margin-block-end: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ktmuzik-img{
+    margin-right: 30px;
+}
+
+.p {
+    font-size: 50px;
+    margin-right: 15px;
+}
+
+.controls-panel-box{
+    display: flex;
+}
+
+.time-box{
+    font-size: 14px;
+    display: flex;
+}
+
+.time {
+    margin: auto 5px;
+    margin-right: 10px;
+}
+
+.play-pause-btn{
+    cursor: pointer;
+}
+
+.speed-box, .volume-box {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.volume-box{
+    margin-left: 5px;
+}
+
+.speed-btn{
+    cursor: pointer;
+}
+
+.speed-btn-animation {
+    animation: rotate-icon .3s;
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.speed-panel-box, .volume-panel-box{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    position: absolute;
+    font-family: Whitney;
+    border-radius: 2px;
+    font-size: 13px;
+    border: 2px solid black;
+    animation: appear .3s;
+    user-select: none;
+    overflow-y: scroll;
+    height: 100px;
+    margin-top: 25px;
+}
+
+.alert-panel-box, .speed-panel-alert-box{
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #fff7b3;
+    border: 1.5px solid #ffc300;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Whitney;
+    font-size: 13px;
+}
+
+.black-screen-alpha{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+    animation: opac 0.1s;
+    overflow-y: scroll;
+}
+
+.embed-code-copy-box, .box-responsive, .volume-oncontextmenu-responsive-box{
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    animation: opac .1s;
+    z-index: 101;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #b3b3b3;
+    box-sizing: border-box;
+}
+
+.box-responsive{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-responsive-inside{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-responsive-icon {
+    margin-block-start: auto;
+    margin-block-end: auto;
+    margin-right: 5px;
+}
+
+.box-responsive-btn{
+    background-color: #323232;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    fill: white;
+    transition: ease .2s;
+    cursor: pointer;
+}
+
+.box-responsive-btn:hover{
+    background-color: #ffc300;
+    color: black;
+    fill: black;
+}
+
+.box-responsive-btn-inside{
+    display: flex;
+    font-size: 14px;
+}
+
+.box-responsive-btn-margin{
+    margin: 0 auto;
+    display: flex;
+}
+
+.embed-code-inside{
+    display: flex;
+    flex-direction: column;
+}
+
+.embed-box-1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.embed-title{
+    text-align: center;
+    font-size: 50px;
+}
+
+.embed-code-box{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.embed-copy-btn{
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    background-color: #333333;
+    font-family: Whitney;
+    border: none;
+    transition: ease .2s;
+    width: 100%
+}
+
+.embed-copy-btn:hover{
+    background-color: #ffc300;
+    color: black;
+}
+
+.embed-copy-btn-clicked{
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    background-color: #d3d3d3;
+    font-family: Whitney;
+    border: none;
+}
+
+.volume-oncontextmenu-responsive-box-inside{
+    display: flex;
+    flex-direction: column;
+}
+
+.close-icon-box-responsive{
+    margin-bottom: 10px;
+}
+
+.icon-box-responsive{
+    display: none;
+}
+
+.close-box-responsive{
+    cursor: pointer;
+    float: right;
+}
+
+.mute-btn{
+    border-radius: 3px;
+    border: 1px solid #0059ff;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    color: #0059ff;
+    font-weight: bold;
+}
+
+.mute-btn:hover{
+    border: 1px solid #1500ff;
+    color: #1500ff;
+}
+
+.speed-panel-alert-box{
+    width: 100%;
+}
+
+.volume-panel-box{
+    height: auto;
+}
+
+.speed-panel-box::-webkit-scrollbar {
+    width: 1px;
+}
+
+.speed-panel-box::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
+.speed-value, .volume-value {
+    padding: 10px 20px;
+}
+
+.speed-value:hover{
+    background-color: #d1d1d1;
+}
+
+.volume-value{
+    padding-left: 10px;
+    display: flex;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+}
+
+.volume-btn {
+    cursor: pointer;
+}
+
+.volume-value > p{
+    margin-right: 7px;
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+.volume-range{
+    -webkit-appearance: none;
+    width: 100%;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    background-color: rgb(214, 214, 214);
+}
+
+.volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+.volume-range::-moz-range-thumb {
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+.volume_oncontextmenu_box{
+    padding: 6px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fade .2s;
+    position: relative;
+    left: -20px;
+    bottom: -20px;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0
+    } to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-out{
+    from{
+        opacity: 1
+    } to {
+        opacity: 0
+    }
+}
+
+.mute {
+    color: white;
+    font-size: 13px;
+}
+
+.mute > div{
+    font-family: "Whitney";
+    margin-right: 10px;
+}
+
+.volume_oncontextmenu_box:hover{
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+.seekslider {
+    -webkit-appearance: none;
+    width: 100%;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    background-color: rgb(214, 214, 214);
+}
+
+.seekslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+.seekslider::-moz-range-thumb {
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+    .speed-panel-alert-box-responsive{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #fff7b3;
+        border: 1.5px solid #ffc300;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 13px;
+    }
+    .information-box1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ktmuzik-img{
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .information-box2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon-box-responsive{
+        display: block;
+    }
+    .embed-code-copy-box{
+        display: none;
+    }
+    .embed-code-copy-box-responsive{
+        display: block;
+    }
+    .box-responsive-fadein{
+        animation: fade .2s;
+    }
+    .box-responsive-fadeout{
+        animation: fade-out .2s;
+    }
+}
