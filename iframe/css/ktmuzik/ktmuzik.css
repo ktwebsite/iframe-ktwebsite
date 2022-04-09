@@ -1,112 +1,94 @@
-.header-box-1{
-    display: flex;
+@font-face {
+    font-family: "Whitney Bold";
+    src: url('../../font/whitneybold-webfont.woff') format('woff2'),
+         url('../../font/whitneybold-webfont.woff2') format('woff');
 }
 
-.title {
-    font-size: 45px;
-    margin-block-start: auto;
-    margin-block-end: auto;
+@font-face {
+    font-family: "Whitney";
+    src: url('../../font/whitney_medium-webfont.woff') format('woff'),
+         url('../../font/whitney_medium-webfont.woff2') format('woff2');
 }
 
-.information-box3 {
-    display: flex;
+h1,h2,h3,h4,h5,h6,p,span{
+    margin: 0;
+    font-family: "Whitney", "Whitney Bold";
 }
 
-.static{
-    font-size: 13px;
-    margin-right: 15px;
-    width: 200px;
+a{
+    text-decoration: none;
 }
 
-.information-music {
-    margin-bottom: 10px;
+input{
+    border: none;
 }
 
-.like-dislike-btn {
-    display: flex;
-}
-
-.like-btn, .dislike-btn {
-    display: flex;
-    margin-right: 13px;
-}
-
-.svg-like-btn, .svg-dislike-btn {
-    margin-right: 5px;
+button{
+    border: none;
     cursor: pointer;
+    padding: 0;
 }
 
-.like-text, .dislike-text {
-    margin-block-start: auto;
-    margin-block-end: auto;
-}
-
-.about {
-    font-size: 14px;
-}
-
-.content-background{
-    background:white;
-    width: 100%;
-    overflow-y: scroll;
-}
-
-.bar {
-    display: none;
-}
-
-.go-back{
-    margin: 10px;
-}
-
-.go-back svg{
-    transform: scale(-1, 1);
-}
-
-.informations {
-    margin: 50px;
-}
-
-.information-box{
+body {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
 }
 
-.information-box1{
-    display: flex;
-    margin-bottom: 50px;
-    user-select: none;
+.iframe-container{
+    background-color: #ffffff;
+    padding: 30px;
+    font-family: "Whitney", "Whitney Bold";
+    max-width: 512px;
 }
 
-.information-box2{
-    display: flex;
-    flex-direction: column;
-    margin-block-start: auto;
-    margin-block-end: auto;
-}
-
-.text-box-informations{
+.container{
     display: flex;
 }
 
-.item-box{
-    margin-block-start: auto;
-    margin-block-end: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.ktmuzik-img{
+.img-container {
     margin-right: 30px;
 }
 
-.p {
+.container_2 {
+    margin-block-start: auto;
+    margin-block-end: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: "Whitney";
     font-size: 50px;
-    margin-right: 15px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 13px;
+}
+
+.description {
+    display: flex;
+    margin-bottom: 13px;
+    color: rgb(0, 0, 0);
+}
+
+.publishedAt{
+    display: flex;
+    margin-right: 10px;
+    font-size: 13.5px;
+}
+
+.total-views {
+    display: flex;
+    font-size: 13.5px;
+}
+
+.number-views{
+    margin-left: 5px;
 }
 
 .controls-panel-box{
     display: flex;
+    color: rgb(0, 0, 0);
 }
 
 .time-box{
@@ -126,7 +108,7 @@
 .speed-box, .volume-box {
     margin-left: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 .volume-box{
@@ -164,11 +146,11 @@
     animation: appear .3s;
     user-select: none;
     overflow-y: scroll;
-    height: 100px;
-    margin-top: 25px;
+    height: 90px;
+    margin-bottom: 25px;
 }
 
-.alert-panel-box, .speed-panel-alert-box{
+.alert-panel-box{
     margin: 5px;
     padding: 10px 20px;
     background-color: #fff7b3;
@@ -179,158 +161,16 @@
     font-size: 13px;
 }
 
-.black-screen-alpha{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    z-index: 100;
-    animation: opac 0.1s;
-    overflow-y: scroll;
-}
-
-.embed-code-copy-box, .box-responsive, .volume-oncontextmenu-responsive-box{
-    margin: 0 30px;
-    display: flex;
-    align-items: center;
-    animation: opac .1s;
-    z-index: 101;
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #b3b3b3;
-    box-sizing: border-box;
-}
-
-.box-responsive{
-    display: flex;
-    flex-direction: column;
-}
-
-.box-responsive-inside{
-    display: flex;
-    flex-direction: column;
-}
-
-.box-responsive-icon {
-    margin-block-start: auto;
-    margin-block-end: auto;
-    margin-right: 5px;
-}
-
-.box-responsive-btn{
-    background-color: #323232;
-    border-radius: 25px;
-    margin-bottom: 10px;
-    padding: 10px;
-    color: white;
-    fill: white;
-    transition: ease .2s;
-    cursor: pointer;
-}
-
-.box-responsive-btn:hover{
-    background-color: #ffc300;
-    color: black;
-    fill: black;
-}
-
-.box-responsive-btn-inside{
-    display: flex;
-    font-size: 14px;
-}
-
-.box-responsive-btn-margin{
-    margin: 0 auto;
-    display: flex;
-}
-
-.embed-code-inside{
-    display: flex;
-    flex-direction: column;
-}
-
-.embed-box-1{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.embed-title{
-    text-align: center;
-    font-size: 50px;
-}
-
-.embed-code-box{
-    padding: 10px;
-    border-radius: 5px;
-    border: 2px solid black;
-    margin-bottom: 10px;
-}
-
-.embed-copy-btn{
-    border-radius: 15px;
-    padding: 15px;
-    color: white;
-    background-color: #333333;
-    font-family: Whitney;
-    border: none;
-    transition: ease .2s;
-    width: 100%
-}
-
-.embed-copy-btn:hover{
-    background-color: #ffc300;
-    color: black;
-}
-
-.embed-copy-btn-clicked{
-    border-radius: 15px;
-    padding: 15px;
-    color: white;
-    background-color: #d3d3d3;
-    font-family: Whitney;
-    border: none;
-}
-
-.volume-oncontextmenu-responsive-box-inside{
-    display: flex;
-    flex-direction: column;
-}
-
-.close-icon-box-responsive{
-    margin-bottom: 10px;
-}
-
-.icon-box-responsive{
-    display: none;
-}
-
-.close-box-responsive{
-    cursor: pointer;
-    float: right;
-}
-
-.mute-btn{
-    border-radius: 3px;
-    border: 1px solid #0059ff;
-    padding: 10px;
-    text-align: left;
-    width: 100%;
-    color: #0059ff;
-    font-weight: bold;
-}
-
-.mute-btn:hover{
-    border: 1px solid #1500ff;
-    color: #1500ff;
-}
-
 .speed-panel-alert-box{
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #fff7b3;
+    border: 1.5px solid #ffc300;
+    border-radius: 5px;
     width: 100%;
+    text-align: center;
+    font-family: Whitney;
+    font-size: 13px;
 }
 
 .volume-panel-box{
@@ -338,11 +178,12 @@
 }
 
 .speed-panel-box::-webkit-scrollbar {
-    width: 1px;
+    width: 5px;
 }
 
 .speed-panel-box::-webkit-scrollbar-thumb{
     background-color: black;
+    border-radius: 20px;
 }
 
 .speed-value, .volume-value {
@@ -434,14 +275,6 @@
     }
 }
 
-@keyframes fade-out{
-    from{
-        opacity: 1
-    } to {
-        opacity: 0
-    }
-}
-
 .mute {
     color: white;
     font-size: 13px;
@@ -470,7 +303,7 @@
     width: 14px;
     height: 15px;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -478,49 +311,28 @@
     width: 14px;
     height: 15px;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
 @media screen and (max-width: 800px){
-    .speed-panel-alert-box-responsive{
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        margin: 5px;
-        padding: 10px 20px;
-        background-color: #fff7b3;
-        border: 1.5px solid #ffc300;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 13px;
-    }
-    .information-box1{
+    .container{
         flex-direction: column;
         align-items: center;
     }
-    .ktmuzik-img{
+    .img-container{
         margin-bottom: 30px;
-        margin-right: 0;
+        margin-right: 0px;
     }
-    .information-box2{
-        flex-direction: column;
+    .container_2{
         align-items: center;
     }
-    .icon-box-responsive{
-        display: block;
+    .volume-panel-box{
+        margin: 0;
+        top: 240px;
     }
-    .embed-code-copy-box{
-        display: none;
-    }
-    .embed-code-copy-box-responsive{
-        display: block;
-    }
-    .box-responsive-fadein{
-        animation: fade .2s;
-    }
-    .box-responsive-fadeout{
-        animation: fade-out .2s;
+    .speed-panel-box{
+        margin: 0;
+        top: 190px;
     }
 }
