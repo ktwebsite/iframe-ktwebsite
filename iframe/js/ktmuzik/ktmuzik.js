@@ -1,13 +1,4 @@
-$.getJSON("https://www.googleapis.com/youtube/v3/videos?id=P3CRrLoTaeU&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4&part=snippet,contentDetails", function(publish_date){
-        const date = publish_date.items[0].snippet.publishedAt;
-        const publish_time = document.getElementById('publish-date');
-        publish_time.innerHTML = date.slice(0, 10);
-    })
-    $.getJSON('https://www.googleapis.com/youtube/v3/videos?part=statistics&id=P3CRrLoTaeU&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4', function(data) {
-    const views = data.items[0].statistics.viewCount;
-        const number_views = document.getElementById('number-views');
-        number_views.innerText = views;
-    });
+
 
 const play_pause_btn = document.getElementById('play-pause-btn');
 var seekslider = document.getElementById("seekslider");
