@@ -1,4 +1,6 @@
-
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
 
 const play_pause_btn = document.getElementById('play-pause-btn');
 var seekslider = document.getElementById("seekslider");
@@ -166,32 +168,3 @@ mute.onclick = () => {
         volume_btn.innerHTML = volume_unmute_icon;
     }
 }
-
-const alert_panel_box = document.getElementById('alert-panel-box');
-const alert_panel_box_responsive = document.getElementById('alert-panel-box-responsive');
-const loop = document.getElementById('loop');
-// const true_false = document.getElementById('true-false');
-
-// document.addEventListener("keydown", event => {
-//     if(event.keyCode === 76){
-//         if(audio.loop == false){
-//             audio.loop = true;
-//             loop.style.display = 'block';
-//             true_false.innerText = 'Enabled';
-//             alert_panel_box.style.display = 'block';
-
-//             setTimeout(() => {
-//                 alert_panel_box.style.display = 'none';
-//             }, 2000);
-//         } else {
-//             audio.loop = false;
-//             loop.style.display = 'none';
-//             true_false.innerText = 'Disabled';
-//             alert_panel_box.style.display = 'block';
-
-//             setTimeout(() => {
-//                 alert_panel_box.style.display = 'none';
-//             }, 2000);
-//         }
-//     }
-// });
