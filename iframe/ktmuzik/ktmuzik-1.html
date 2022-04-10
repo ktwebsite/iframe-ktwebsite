@@ -70,82 +70,9 @@
         </div>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/ktmuzik/ktmuzik-1.js"></script>
     <script type="text/javascript">
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iframe KTMuZik 1</title>
-    <link rel="stylesheet" href="../css/ktmuzik/ktmuzik.css">
-</head>
-<body style="margin: 0; height: 100%;">
-    <div class="iframe-container">
-        <div class="container">
-            <img class="img-container" src="../img/ktmuzik.JPG" alt="KTMuZik" width="130" height="130">
-            <div class="container_2">
-                <p class="title">KTMuZik 1</p>
-                <div class="description">
-                    <div class="publishedAt">
-                        <svg viewBox="0 0 24 24" style="margin-right: 5px;" width="15" height="15">
-                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
-                        </svg>
-                        <p class="publish_date" id="publish-date">2000-01-01</p>
-                    </div>
-                    <div class="total-views">
-                        <p style="font-family: Whitney Bold;">Total Views:</p>
-                        <div class="number-views" id="number-views">0</div>
-                    </div>
-                </div>
-                <div class="controls-panel-box">
-                    <svg viewBox="0 0 36 36" id="play-pause-btn" class="play-pause-btn" width="27" height="27">
-                        <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
-                    </svg>
-                    <div class="time-box">
-                        <div class="time">
-                            <span id="time-current">00:00</span>
-                            <span> / </span>
-                            <span id="time-duration">00:00</span>
-                        </div>
-                        <input id="seekslider" type="range" class="seekslider" min="0" max="100" value="0" step="1" style="width: 150px; height: 3px;">
-                    </div>
-                    <div class="speed-box">
-                        <div id="speed-panel-box" style="display: none;" class="speed-panel-box">
-                            <div id="2x" class="speed-value">2x</div>
-                            <div id="1.5x" class="speed-value">1.5x</div>
-                            <div id="1.0x" class="speed-value">1.0x</div>
-                            <div id="0.5x" class="speed-value">0.5x</div>
-                            <div id="0.25x" class="speed-value">0.25x</div>
-                        </div>
-                        <svg viewBox="0 0 24 24" id="speed-btn" class="speed-btn" width="24" height="24">
-                            <path d="M10,8v8l6-4L10,8L10,8z M6.3,5L5.7,4.2C7.2,3,9,2.2,11,2l0.1,1C9.3,3.2,7.7,3.9,6.3,5zM5,6.3L4.2,5.7C3,7.2,2.2,9,2,11 l1,.1C3.2,9.3,3.9,7.7,5,6.3zM5,17.7c-1.1-1.4-1.8-3.1-2-4.8L2,13c0.2,2,1,3.8,2.2,5.4L5,17.7zM11.1,21c-1.8-0.2-3.4-0.9-4.8-2 l-0.6,.8C7.2,21,9,21.8,11,22L11.1,21zM22,12c0-5.2-3.9-9.4-9-10l-0.1,1c4.6,.5,8.1,4.3,8.1,9s-3.5,8.5-8.1,9l0.1,1 C18.2,21.5,22,17.2,22,12z"></path>
-                        </svg>
-                    </div>
-                    <div class="volume-box">
-                        <svg viewBox="0 0 35 35" id="volume-btn" class="volume-btn" width="35" height="25">
-                            <path d="M8,21 L12,21 L17,26 L17,10 L12,15 L8,15 L8,21 Z M19,14 L19,22 C20.48,21.32 21.5,19.77 21.5,18 C21.5,16.26 20.48,14.74 19,14 ZM19,11.29 C21.89,12.15 24,14.83 24,18 C24,21.17 21.89,23.85 19,24.71 L19,26.77 C23.01,25.86 26,22.28 26,18 C26,13.72 23.01,10.14 19,9.23 L19,11.29 Z"></path>
-                        </svg>
-                        <div class="volume-panel-box" id="volume-panel-box" style="display: none;">
-                            <div class="volume-value">
-                                <p id="volume-value">50%</p>
-                                <input type="range" id="volume-slider" class="volume-range" name="volume" min="0" max="100" value="50" style="width: 150px; height: 3px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div id="volume_oncontextmenu_box" style="display: none;" class="volume_oncontextmenu_box">
-                        <div id="mute" class="mute">
-                            <div id="mute-text">Mute</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        var audio = new Audio("https://cdn.glitch.global/84a5dd4b-f041-4091-88bc-5797c8a8129b/KTMuZik%201.mp3?v=1648969637618");$.getJSON("https://www.googleapis.com/youtube/v3/videos?id=P3CRrLoTaeU&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4&part=snippet,contentDetails", function(publish_date){
+      var audio = new Audio("https://cdn.glitch.global/84a5dd4b-f041-4091-88bc-5797c8a8129b/KTMuZik%201.mp3?v=1648969637618");
+      $.getJSON("https://www.googleapis.com/youtube/v3/videos?id=P3CRrLoTaeU&key=AIzaSyBSP9iOT6sxfPYE7zs5jrrdI3rkdSn7dO4&part=snippet,contentDetails", function(publish_date){
         const date = publish_date.items[0].snippet.publishedAt;
         const publish_time = document.getElementById('publish-date');
         publish_time.innerHTML = date.slice(0, 10);
