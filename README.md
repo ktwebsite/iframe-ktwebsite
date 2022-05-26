@@ -1,3 +1,3 @@
-# About this repo
+# KTWebsite Github repository
 
-This repo contains KTMuZik, KTMuZik+, KTFilm and chill music HTML document just to use as an iframe for KTWebsite website.
+This repository is owned by KTWebsite. You are strictly prohibited from making commit changes, making a copy of this repository.
